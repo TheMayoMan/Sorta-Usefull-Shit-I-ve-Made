@@ -1,0 +1,279 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace [insert a name here]
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //'Rock, Paper, Scissors' game
+
+        Start: 
+
+            string userInput;
+
+            Console.WriteLine("Rock, Paper, Scissors, shoot!");
+            Console.WriteLine();
+
+            //Determines User Input
+            userInput = Console.ReadLine();
+             
+            //Determine Machine Answer
+            int Rock = 1;
+            int Paper = 2;
+            int Scissors = 3;
+
+            Random rnd = new Random();
+            int machineAnswer = rnd.Next(1, 4);
+
+            //If User Is Snarky
+            if(userInput == "no")
+            {
+                Console.WriteLine("Ummm yes");
+                Console.WriteLine();
+                goto Start;
+            }
+
+            if (userInput == "No")
+            {
+                Console.WriteLine("Ummm yes");
+                Console.WriteLine();
+                goto Start;
+            }
+
+            //If User Answer Is Rock
+            if (machineAnswer == Rock)
+            {
+                if(userInput == "Rock")
+                {
+                    Console.WriteLine("Rock, draw!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Paper)
+            {
+                if (userInput == "Rock")
+                {
+                    Console.WriteLine("Paper, you lost!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Scissors)
+            {
+                if (userInput == "Rock")
+                {
+                    Console.WriteLine("Scissors, you won!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            //If User Answer Is Paper
+            if (machineAnswer == Rock)
+            {
+                if (userInput == "Paper")
+                {
+                    Console.WriteLine("Rock, you won!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Paper)
+            {
+                if (userInput == "Paper")
+                {
+                    Console.WriteLine("Paper, draw!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Scissors)
+            {
+                if (userInput == "Paper")
+                {
+                    Console.WriteLine("Scissors, you lost!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            //If User Answer Is Scissors
+            if (machineAnswer == Rock)
+            {
+                if (userInput == "Scissors")
+                {
+                    Console.WriteLine("Rock, you lost!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Paper)
+            {
+                if (userInput == "Scissors")
+                {
+                    Console.WriteLine("Scissors, you won!!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Scissors)
+            {
+                if (userInput == "Scissors")
+                {
+                    Console.WriteLine("Scissors, draw!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            //If User Answer Is rock
+            if (machineAnswer == Rock)
+            {
+                if (userInput == "rock")
+                {
+                    Console.WriteLine("Rock, draw!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Paper)
+            {
+                if (userInput == "rock")
+                {
+                    Console.WriteLine("Paper, you lost!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Scissors)
+            {
+                if (userInput == "rock")
+                {
+                    Console.WriteLine("Scissors, you won!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            //If User Answer Is Paper
+            if (machineAnswer == Rock)
+            {
+                if (userInput == "paper")
+                {
+                    Console.WriteLine("Rock, you won!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Paper)
+            {
+                if (userInput == "paper")
+                {
+                    Console.WriteLine("Paper, draw!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Scissors)
+            {
+                if (userInput == "paper")
+                {
+                    Console.WriteLine("Scissors, you lost!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            //If User Answer Is Scissors
+            if (machineAnswer == Rock)
+            {
+                if (userInput == "scissors")
+                {
+                    Console.WriteLine("Rock, you lost!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Paper)
+            {
+                if (userInput == "scissors")
+                {
+                    Console.WriteLine("Scissors, you won!!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+
+            if (machineAnswer == Scissors)
+            {
+                if (userInput == "scissors")
+                {
+                    Console.WriteLine("Scissors, draw!");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+            else
+            {
+                Console.WriteLine("That's not how this game works!");
+                Console.WriteLine();
+            }
+
+        //Determine If User Wants To Play Again
+        YesNo:
+
+            string yesNoAnswer;
+
+            Console.WriteLine("Would you like to play again? Y/N");
+            yesNoAnswer = Console.ReadLine();
+
+            //Answer Of Y/N
+            if (yesNoAnswer == "Y") 
+            {
+                Console.WriteLine();
+                goto Start;
+            }
+
+            if(yesNoAnswer == "y")
+            {
+                Console.WriteLine();
+                goto Start;
+            }
+            else
+            {
+                if (yesNoAnswer == "N")
+                {
+                    
+                }
+
+                if(yesNoAnswer == "n")
+                {
+
+                }
+                else
+                {
+                    Console.WriteLine("Not a valid answer");
+                    Console.WriteLine();
+                    goto YesNo;
+                }
+            }
+        }
+    }
+}
